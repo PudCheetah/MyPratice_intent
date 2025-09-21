@@ -14,19 +14,12 @@ class ActivityB : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // 從intent中拿取值
         val extra_1 = intent.getIntExtra("message", -1)
         val extra_2 = intent.getStringExtra("message2")
-        binding.extraIntentVale.text = "${extra_1} + ${extra_2}"
+        binding.extraIntentVale.text = "${extra_1} , ${extra_2}"
 
 
         setContentView(binding.root)
-    }
-
-
-    fun getXXXIntentExtra(){
-
-    }
-    fun getAllExtra(){
-
     }
 }

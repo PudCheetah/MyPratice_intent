@@ -17,11 +17,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding.btnJump.setOnClickListener {
+            // 製作一個intent
             val myIntent = Intent(this, ActivityB::class.java)
+            // 僵值放進intent中
             myIntent.putExtra("message",123321)
             myIntent.putExtra("message2", "Hellow")
+            // 實施跳轉
             startActivity(myIntent)
-            myIntent.getStringExtra("123")
         }
         binding.btnJump
         setContentView(binding.root)
